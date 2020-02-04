@@ -26,6 +26,9 @@
         opacity: 0.25;
         cursor: pointer;
       }
+      .button-group button.selected {
+        opacity: 1;
+      }
     </style>
   </head>
   <body>
@@ -35,7 +38,7 @@
       <a href="google.com" class="carousel-cell">3</a>
     </div>
     <div class="button-group">
-      <button class="button"></button>
+      <button class="button selected"></button>
       <button class="button"></button>
       <button class="button"></button>
       <button class="button"></button>
@@ -52,6 +55,8 @@
       //   for an individual element
       var flkty = new Flickity(".main-carousel");
       $(".button-group").on("click", ".button", function() {
+        $(".button-group").removeClass("selected");
+        $(this).addClass("selected");
         var index = $(this).index();
         $carousel.flickity("select", index);
       });
