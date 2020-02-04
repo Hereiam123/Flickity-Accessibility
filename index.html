@@ -55,11 +55,10 @@
       $(".button-group").on("click", ".button", function() {
         $(".button-group").removeClass("selected");
         var index = $(this).index();
-        $(this)
+        $(".button-group button")
           .eq(index)
           .addClass("selected");
         $(".main-carousel").flickity("select", index);
-        console.log(index + " and " + this);
       });
     </script>
   </body>
