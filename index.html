@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main-carousel">
+      <a href="google.com" class="carousel-cell">1</a>
+      <a href="google.com" class="carousel-cell">2</a>
+      <a href="google.com" class="carousel-cell">3</a>
+    </div>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script>
+      // element argument can be a selector string
+      //   for an individual element
+      var flkty = new Flickity(".main-carousel");
+    </script>
+  </body>
+</html>
