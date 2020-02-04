@@ -53,7 +53,7 @@
       //   for an individual element
       $(".main-carousel").flickity();
       $(".button-group").on("click", ".button", function() {
-        $(".button-group").removeClass("selected");
+        $(".button-group button").removeClass("selected");
         var index = $(this).index();
         $(".button-group button")
           .eq(index)
