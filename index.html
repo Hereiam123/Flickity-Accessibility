@@ -51,14 +51,14 @@
     <script>
       // element argument can be a selector string
       //   for an individual element
-      var flkty = new Flickity(".main-carousel");
+      $(".main-carousel").flickity();
       $(".button-group").on("click", ".button", function() {
         $(".button-group").removeClass("selected");
         var index = $(this).index();
         $("button", this)
           .eq(index)
           .addClass("selected");
-        flkty.flickity("select", index);
+        $(".main-carousel").flickity("select", index);
       });
     </script>
   </body>
