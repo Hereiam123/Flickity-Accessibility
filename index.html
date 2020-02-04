@@ -54,8 +54,10 @@
       var flkty = new Flickity(".main-carousel");
       $(".button-group").on("click", ".button", function() {
         $(".button-group").removeClass("selected");
-        $(this).addClass("selected");
         var index = $(this).index();
+        $("button", this)
+          .eq(index)
+          .addClass("selected");
         $carousel.flickity("select", index);
       });
     </script>
