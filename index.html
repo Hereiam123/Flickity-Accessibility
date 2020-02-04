@@ -17,11 +17,22 @@
       <a href="google.com" class="carousel-cell">2</a>
       <a href="google.com" class="carousel-cell">3</a>
     </div>
+    <div class="button-group">
+      <button class="button">1</button>
+      <button class="button">2</button>
+      <button class="button">3</button>
+      <button class="button">4</button>
+      <button class="button">5</button>
+    </div>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script>
       // element argument can be a selector string
       //   for an individual element
-      var flkty = new Flickity(".main-carousel");
+      var flkty = new Flickity(".main-carousel", { pageDots: false });
+      $(".button-group").on("click", ".button", function() {
+        var index = $(this).index();
+        $carousel.flickity("select", index);
+      });
     </script>
   </body>
 </html>
